@@ -1,0 +1,41 @@
+body {
+	font-family: 'Indie Flower', cursive;
+}
+p {
+  background: orange;
+  font-size: 24px;
+}
+h1 {
+	font-size: 12em;
+	font-family: 'Indie Flower', cursive;
+}
+.home {
+	color: red;
+}
+
+#Home {
+	text-decoration: none;
+	list-style: none;
+	/*margin-top: 10%;*/
+}
+.home li {
+	float: left;
+	padding-right: 5px;
+}
+
+.home li a{
+	color: #333;
+}
+.par {
+	max-width: 33%;
+	float: left;
+}
+.par img{
+	width: 80%;
+	height: auto;
+	padding-bottom: 5%;
+}
+.par-container {
+	margin-top: 5%;
+	padding-top: 5%;
+}
