@@ -5,10 +5,26 @@
 </head>
 <body>
 <h1>Hello</h1>
+<ul class="usernames">
+	
+</ul>
+
+<input type="text" class="username" placeholder="Username" />
+<input type="text" class="name" placeholder="Name" />
+<input type="submit" class="submit" />
+
 <script type="text/javascript" src="/static/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 	
-	$.get('/users',function(data){console.log(data)});
+	$.get('/users',function(data){
+		for (var i=0; i<data.data.length; i++){
+			$('.usernames').append("<li>"+data.data[i].username+"</li>");
+		}
+	});
+	$('.submit').on('click',function(event){
+		$.post('/users', {"username": $('.username').val(),"name":$('.name').val()}, function(data){console.log(data)});
+	});
+
 </script>
 </body>
 </html>

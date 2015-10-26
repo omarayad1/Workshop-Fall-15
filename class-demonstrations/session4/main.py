@@ -36,7 +36,7 @@ def single_user(id):
 				break
 		return jsonify({'msg':'deleted'})
 	elif request.method == "GET":
-		for i in lenusers:
+		for el in users:
 			if el['id'] == id:
 				return jsonify(el)
 if __name__ == '__main__':
